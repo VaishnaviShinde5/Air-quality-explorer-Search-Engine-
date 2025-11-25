@@ -157,3 +157,9 @@ cd ../frontend
 npm install
 npm run dev
 ✔ Runs on: http://localhost:5173
+
+
+<img width="902" height="421" alt="image" src="https://github.com/user-attachments/assets/6bb1b5d0-5a10-4f91-894f-f10223288caa" />
+
+
+
