@@ -7,8 +7,11 @@ This project is a full-stack application that allows users to search for Air Qua
 It consists of:
 
 Frontend: React + Vite (Dark Neon UI Dashboard)
+
 Backend: Node.js + Express (REST API)
+
 Caching Layer: Custom LRU in-memory cache for high performance
+
 External Provider: World Air Quality Index API (WAQI)
 
 This project was developed as part of a coding challenge for Finfactor Technologies.
