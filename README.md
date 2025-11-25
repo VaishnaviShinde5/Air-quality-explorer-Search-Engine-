@@ -1,3 +1,4 @@
+<img width="902" height="421" alt="img_finfactor" src="https://github.com/user-attachments/assets/ab8c6266-c53d-43c8-a0bf-ed28193b4c9c" />
 🌫️Air Quality Explorer
 Search global city air quality with a fast, intelligent full-stack AQI search engine
 
@@ -159,7 +160,6 @@ npm run dev
 ✔ Runs on: http://localhost:5173
 
 
-<img width="902" height="421" alt="image" src="https://github.com/user-attachments/assets/6bb1b5d0-5a10-4f91-894f-f10223288caa" />
 
 
 
