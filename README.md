@@ -1,5 +1,5 @@
 <img width="902" height="421" alt="img_finfactor" src="https://github.com/user-attachments/assets/ab8c6266-c53d-43c8-a0bf-ed28193b4c9c" />
-🌫️Air Quality Explorer
+🌫️#Air Quality Explorer
 Search global city air quality with a fast, intelligent full-stack AQI search engine
 
 This project is a full-stack application that allows users to search for Air Quality Index (AQI) of any city in the world and view detailed pollutant breakdown, health impact messages, timestamps, geographical data, and AQI categories.
