@@ -1,123 +1,120 @@
-<img width="902" height="421" alt="img_finfactor" src="https://github.com/user-attachments/assets/ab8c6266-c53d-43c8-a0bf-ed28193b4c9c" />
-🌫️#Air Quality Explorer
-Search global city air quality with a fast, intelligent full-stack AQI search engine
+# 🌫️ Air Quality Explorer  
+### Search global city air quality with a fast, intelligent full-stack AQI search engine
 
-This project is a full-stack application that allows users to search for Air Quality Index (AQI) of any city in the world and view detailed pollutant breakdown, health impact messages, timestamps, geographical data, and AQI categories.
+Air Quality Explorer is a full-stack web application that allows users to search for the **Air Quality Index (AQI)** of any city worldwide and visualize:
 
-It consists of:
+- Real-time AQI  
+- Pollutant breakdown  
+- Dominant pollutant  
+- Health impact messages  
+- Timestamps  
+- Geographic coordinates  
+- AQI category (Good → Hazardous)  
 
-Frontend: React + Vite (Dark Neon UI Dashboard)
+The project follows clean architecture, caching, and REST API principles — built as part of the **Finfactor Technologies Software Engineer Coding Challenge**.
 
-Backend: Node.js + Express (REST API)
+---
 
-Caching Layer: Custom LRU in-memory cache for high performance
+# 🚀 Features
 
-External Provider: World Air Quality Index API (WAQI)
+### 🔎 **1. City Search Engine**
+Instantly fetch AQI data by typing any city name (e.g., Delhi, London, Pune).
 
-This project was developed as part of a coding challenge for Finfactor Technologies.
+### 🌫️ **2. Real-time Air Quality Index**
+- AQI value  
+- AQI category color  
+- Dominant pollutant  
+- Updated timestamp  
+- Source attribution (WAQI official)
 
-🚀 Features
-🔎 1. City Search Engine
+### 🧪 **3. Detailed Pollutant Breakdown**
+Includes available metrics such as:
 
-Type any city name (e.g., Delhi, London, Pune)
-→ Immediately fetch and display AQI & pollutant data.
+- PM2.5  
+- PM10  
+- CO  
+- SO₂  
+- NO₂  
+- O₃  
+- Temperature  
+- Dew  
+- Wind speed/direction  
+…and more depending on city.
 
-🌫️ 2. Real-time Air Quality Index
+### 💬 **4. Health Impact Message**
+Dynamically mapped from AQI category:
 
-Overall AQI value
-AQI category color (Good, Moderate, Unhealthy, etc.)
-Dominant pollutant
-Timestamp & timezone
-Source attribution link (WAQI official)
+| AQI | Category |
+|-----|----------|
+| 0–50 | Good |
+| 51–100 | Moderate |
+| 101–150 | Unhealthy for Sensitive Groups |
+| 151–200 | Unhealthy |
+| 201–300 | Very Unhealthy |
+| 301+ | Hazardous |
 
-🧪 3. Detailed Pollutant Breakdown
+### ⚡ **5. High-Performance Caching (LRU)**
+Backend implements:
 
-Includes indicators like:
+- 10-minute TTL per city  
+- 100-entry LRU cache  
+- Prevents duplicate API calls  
+- Improves performance + reduces latency  
 
-PM2.5
-PM10
-CO
-SO2
-NO2
-O3
-Temperature
-Dew
-Wind
-…and more depending on city availability.
+### 🎨 **6. Modern Dark-Neon UI**
+Built with React + custom CSS:
 
-💬 4. Health Impact Message
+- Gradient AQI badge  
+- Responsive layout  
+- Pollutant cards  
+- Error messages  
+- Loading state  
+- AQI color legend  
 
-Dynamic message based on AQI:
+### 💻 **7. Fully Local Execution**
+- Backend → **http://localhost:4000**  
+- Frontend → **http://localhost:5173**  
 
-Good
-Moderate
-Unhealthy
-Very Unhealthy
-Hazardous
+Project runs completely locally as per challenge requirements.
 
-⚡ 5. High-Performance Caching (LRU)
+---
 
-Backend caches results for:
-Fast repeated searches
-Lower API usage
-10-minute TTL per city
-Maximum 100 LRU entries
+# 🏗️ System Architecture
 
-🎨 6. Polished Dark-Neon UI
-
-Modern dashboard layout
-AQI badge with gradient glow
-Pollutant tiles
-Error cards & loader
-AQI Legend Scale (Good → Hazardous)
-
-💻 7. Fully Local Setup
-
-Backend on http://localhost:4000
-Frontend on http://localhost:5173
-
-
-🏗️8. System Architecture
 ┌──────────┐      ┌───────────────────┐      ┌────────────────────────┐
 │  Frontend│ ---> │ Backend (Express) │ ---> │  WAQI External API     │
 │ (React)  │ <--- │ + LRU Cache       │ <--- │  (aqicn.org/api/)       │
 └──────────┘      └───────────────────┘      └────────────────────────┘
-Flow:
 
-1.User searches a city in React UI
-2.React calls your backend /api/air-quality?city=...
-3.Backend checks cache
-4.If not cached → fetch from WAQI
-5.Response stored in LRU cache
-6.Backend formats response & sends to frontend
-7.UI renders a beautiful dashboard
+### **Flow**
+1. User searches for a city  
+2. Frontend calls: `/api/air-quality?city=<name>`  
+3. Backend checks LRU cache  
+4. If not cached → fetch from WAQI  
+5. Cache and format result  
+6. Return JSON to frontend  
+7. Frontend displays AQI dashboard  
 
+---
 
-🔌 API Documentation
-Endpoint
+# 🔌 API Documentation
+
+### **Endpoint**
 GET /api/air-quality?city=<cityName>
 
-Parameters
-Name	Type	 Required	    Example
-city	string	 Yes	        London
+### **Query Parameters**
+| Name | Type | Required | Example |
+|------|------|----------|---------|
+| city | string | yes | London |
 
+---
 
-
-
-Example
-After starting backend, visit:
-
-👉 http://localhost:4000/api/air-quality?city=Delhi
-
-You should get JSON like:
+### **API Example Response**
 
 ```json
 {
   "cityName": "Major Dhyan Chand National Stadium, Delhi, India",
-  "coordinates": {
-    "lat": 28.612498,
-    "lon": 77.237388
-  },
+  "coordinates": { "lat": 28.612498, "lon": 77.237388 },
   "aqi": 263,
   "dominantPollutant": "pm25",
   "pollutants": {
@@ -136,31 +133,64 @@ You should get JSON like:
   "timezone": "+05:30",
   "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
 }
+
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
-
-git clone https://github.com/VaishnaviShinde5/air-quality-explorer.git
-cd air-quality-explorer
+git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
+cd Air-quality-explorer-Search-Engine-
 
 🟦 Backend Setup (Node + Express)
-
 cd backend
 npm install
-Create .env file:
+
+Create .env:
 
 WAQI_TOKEN=your_token_here
 PORT=4000
 
 Start backend:
 npm start
-✔ Runs on: http://localhost:4000
+
+Backend runs on:
+👉 http://localhost:4000
 
 🟩 Frontend Setup (React + Vite)
-
 cd ../frontend
 npm install
 npm run dev
-✔ Runs on: http://localhost:5173
+
+Frontend runs on:
+👉 http://localhost:5173
+
+
+🛡 Error Handling
+
+The system gracefully handles:
+
+| Condition         | Behavior                        |
+| ----------------- | ------------------------------- |
+| City not provided | 400 response                    |
+| Invalid city      | Informative error message       |
+| API unreachable   | Frontend shows fallback message |
+| Cache expired     | Auto-refresh from API           |
+
+
+🧠 Why This Project Stands Out
+
+✔ Clean full-stack architecture
+✔ High-performance caching
+✔ Professional modern UI
+✔ Excellent code structure
+✔ API integration skills
+✔ Strong README documentation
+✔ Meets all Finfactor requirements
+
+This project demonstrates real-world software engineering ability, not just simple coding.
+
+👤 Developer
+
+Vaishnavi Shinde
+GitHub: https://github.com/VaishnaviShinde5
 
 
 
