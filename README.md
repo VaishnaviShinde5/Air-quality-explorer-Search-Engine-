@@ -110,31 +110,6 @@ GET /api/air-quality?city=<cityName>
 | city | string | yes | London |
 
 ---
-### **API Example Response**
-
-```json
-{
-  "cityName": "Major Dhyan Chand National Stadium, Delhi, India",
-  "coordinates": { "lat": 28.612498, "lon": 77.237388 },
-  "aqi": 263,
-  "dominantPollutant": "pm25",
-  "pollutants": {
-    "co": 3.81,
-    "no2": 44.3,
-    "o3": 3.3,
-    "p": 992,
-    "pm10": 236,
-    "pm25": 263,
-    "so2": 9,
-    "t": 14.14,
-    "w": 0.4,
-    "wd": 198
-  },
-  "lastUpdated": "2025-11-26 11:00:00",
-  "timezone": "+05:30",
-  "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
-}
-
 **⚙️ Installation & Setup**
 1️⃣ Clone Repository
 git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
@@ -163,8 +138,33 @@ npm run dev
 Frontend runs on:
 👉 http://localhost:5173
 
+### **API Example Response**
 
-🛡 Error Handling
+```json
+{
+  "cityName": "Major Dhyan Chand National Stadium, Delhi, India",
+  "coordinates": { "lat": 28.612498, "lon": 77.237388 },
+  "aqi": 263,
+  "dominantPollutant": "pm25",
+  "pollutants": {
+    "co": 3.81,
+    "no2": 44.3,
+    "o3": 3.3,
+    "p": 992,
+    "pm10": 236,
+    "pm25": 263,
+    "so2": 9,
+    "t": 14.14,
+    "w": 0.4,
+    "wd": 198
+  },
+  "lastUpdated": "2025-11-26 11:00:00",
+  "timezone": "+05:30",
+  "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
+}
+
+
+**🛡 Error Handling**
 
 The system gracefully handles:
 
