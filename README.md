@@ -136,3 +136,25 @@ GET /api/air-quality?city=<cityName>
   "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
 }
 
+## ⚙️ Installation
+# 1️⃣ Clone Repository
+git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
+cd Air-quality-explorer-Search-Engine-
+
+# 2️⃣ Backend Setup
+cd backend
+npm install
+
+# Create .env (manually add your WAQI token)
+echo WAQI_TOKEN=your_token_here > .env
+echo PORT=4000 >> .env
+
+# Start Backend
+npm start
+
+# 3️⃣ Frontend Setup
+cd ../frontend
+npm install
+
+# Start Frontend
+npm run dev
