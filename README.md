@@ -135,58 +135,6 @@ GET /api/air-quality?city=<cityName>
   "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
 }
 
-⚙️ Installation & Setup
-1️⃣ Clone Repository
-git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
-cd Air-quality-explorer-Search-Engine-
-
-🟦 Backend Setup (Node + Express)
-cd backend
-npm install
-
-Create .env:
-
-WAQI_TOKEN=your_token_here
-PORT=4000
-
-Start backend:
-npm start
-
-Backend runs on:
-👉 http://localhost:4000
-
-🟩 Frontend Setup (React + Vite)
-cd ../frontend
-npm install
-npm run dev
-
-Frontend runs on:
-👉 http://localhost:5173
-
-
-🛡 Error Handling
-
-The system gracefully handles:
-
-| Condition         | Behavior                        |
-| ----------------- | ------------------------------- |
-| City not provided | 400 response                    |
-| Invalid city      | Informative error message       |
-| API unreachable   | Frontend shows fallback message |
-| Cache expired     | Auto-refresh from API           |
-
-
-🧠 Why This Project Stands Out
-
-✔ Clean full-stack architecture
-✔ High-performance caching
-✔ Professional modern UI
-✔ Excellent code structure
-✔ API integration skills
-✔ Strong README documentation
-✔ Meets all Finfactor requirements
-
-This project demonstrates real-world software engineering ability, not just simple coding.
 
 👤 Developer
 
