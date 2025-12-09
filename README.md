@@ -101,17 +101,6 @@ Project runs completely locally as per challenge requirements.
 
 ---
 
-# 🔌 API Documentation 
-
-### **Endpoint**
-GET /api/air-quality?city=<cityName>
-
-### **Query Parameters**
-| Name | Type | Required | Example |
-|------|------|----------|---------|
-| city | string | yes | London |
-
----
 ****⚙️ Installation & Setup****
 
 1️⃣ Clone Repository
@@ -160,6 +149,17 @@ The system gracefully handles:
 | Cache expired     | Auto-refresh from API           |
 
 
+# 🔌 API Documentation 
+
+### **Endpoint**
+GET /api/air-quality?city=<cityName>
+
+### **Query Parameters**
+| Name | Type | Required | Example |
+|------|------|----------|---------|
+| city | string | yes | London |
+
+---
 
 ### **API Example Response**
 
