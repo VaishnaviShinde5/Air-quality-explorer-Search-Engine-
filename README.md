@@ -84,10 +84,6 @@ Project runs completely locally as per challenge requirements.
 
 
 # 🏗️ System Architecture
-
-Air Quality Explorer follows a clean **client–server architecture** with a dedicated caching layer in the backend to optimize performance and reduce external API calls.
-
-```text
 ┌────────────────────────────┐
 │        Frontend (UI)       │
 │  React + Vite (Browser)    │
@@ -109,8 +105,6 @@ Air Quality Explorer follows a clean **client–server architecture** with a ded
 │    WAQI External API       │
 │   (https://aqicn.org/api)  │
 └────────────────────────────┘
-
-
 
 ### **Flow**
 1. User searches for a city  
