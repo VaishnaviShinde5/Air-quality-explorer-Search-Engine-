@@ -110,7 +110,8 @@ GET /api/air-quality?city=<cityName>
 | city | string | yes | London |
 
 ---
-**⚙️ Installation & Setup**
+****⚙️ Installation & Setup****
+
 1️⃣ Clone Repository
 git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
 cd Air-quality-explorer-Search-Engine-
