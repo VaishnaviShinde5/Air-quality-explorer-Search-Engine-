@@ -86,6 +86,7 @@ Project runs completely locally as per challenge requirements.
 │ (React)  │ <--- │ + LRU Cache       │ <--- │  (aqicn.org/api/)       │
 └──────────┘      └───────────────────┘      └────────────────────────┘
 
+
 ### **Flow**
 1. User searches for a city  
 2. Frontend calls: `/api/air-quality?city=<name>`  
