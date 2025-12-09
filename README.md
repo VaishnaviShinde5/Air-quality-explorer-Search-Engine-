@@ -1,3 +1,4 @@
+<img width="902" height="421" alt="img_finfactor" src="https://github.com/user-attachments/assets/9a46a281-e2bd-4567-95dc-480c418efb2f" />
 # 🌫️ Air Quality Explorer  
 ### Search global city air quality with a fast, intelligent full-stack AQI search engine
 
