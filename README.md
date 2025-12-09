@@ -138,6 +138,18 @@ npm run dev
 Frontend runs on:
 👉 http://localhost:5173
 
+**🛡 Error Handling**
+The system gracefully handles:
+
+| Condition         | Behavior                        |
+| ----------------- | ------------------------------- |
+| City not provided | 400 response                    |
+| Invalid city      | Informative error message       |
+| API unreachable   | Frontend shows fallback message |
+| Cache expired     | Auto-refresh from API           |
+
+
+
 ### **API Example Response**
 
 ```json
@@ -164,7 +176,7 @@ Frontend runs on:
 }
 
 
-**🛡 Error Handling**
+🛡 Error Handling
 
 The system gracefully handles:
 
@@ -175,20 +187,7 @@ The system gracefully handles:
 | API unreachable   | Frontend shows fallback message |
 | Cache expired     | Auto-refresh from API           |
 
-
-🧠 Why This Project Stands Out
-
-✔ Clean full-stack architecture
-✔ High-performance caching
-✔ Professional modern UI
-✔ Excellent code structure
-✔ API integration skills
-✔ Strong README documentation
-✔ Meets all Finfactor requirements
-
-This project demonstrates real-world software engineering ability, not just simple coding.
-
-👤 Developer
+**👤 Developer**
 
 Vaishnavi Shinde
 GitHub: https://github.com/VaishnaviShinde5
