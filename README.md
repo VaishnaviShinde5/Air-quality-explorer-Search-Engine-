@@ -114,15 +114,18 @@ GET /api/air-quality?city=<cityName>
 
 1️⃣ Clone Repository
 git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
+
 cd Air-quality-explorer-Search-Engine-
 
 🟦 Backend Setup (Node + Express)
 cd backend
+
 npm install
 
 Create .env:
 
 WAQI_TOKEN=your_token_here
+
 PORT=4000
 
 Start backend:
@@ -175,22 +178,4 @@ The system gracefully handles:
   "timezone": "+05:30",
   "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
 }
-
-
-🛡 Error Handling
-
-The system gracefully handles:
-
-| Condition         | Behavior                        |
-| ----------------- | ------------------------------- |
-| City not provided | 400 response                    |
-| Invalid city      | Informative error message       |
-| API unreachable   | Frontend shows fallback message |
-| Cache expired     | Auto-refresh from API           |
-
-**👤 Developer**
-
-Vaishnavi Shinde
-GitHub: https://github.com/VaishnaviShinde5
-
 
