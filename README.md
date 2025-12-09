@@ -115,6 +115,7 @@ GET /api/air-quality?city=<cityName>
 ****⚙️ Installation & Setup****
 
 1️⃣ Clone Repository
+
 git clone https://github.com/VaishnaviShinde5/Air-quality-explorer-Search-Engine-.git
 
 cd Air-quality-explorer-Search-Engine-
@@ -131,14 +132,18 @@ WAQI_TOKEN=your_token_here
 PORT=4000
 
 Start backend:
+
 npm start
 
 Backend runs on:
 👉 http://localhost:4000
 
 🟩 Frontend Setup (React + Vite)
+
 cd ../frontend
+
 npm install
+
 npm run dev
 
 Frontend runs on:
