@@ -136,7 +136,7 @@ GET /api/air-quality?city=<cityName>
   "sourceUrl": "https://aqicn.org/city/delhi/major-dhyan-chand-national-stadium"
 }
 
-
+---
 **⚙️ Installation & Setup**
 
 1️⃣ Clone Repository
